@@ -1,0 +1,544 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &442687980753424198
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 442687980753424197}
+  - component: {fileID: 464301286345916349}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &442687980753424197
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442687980753424198}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 704.99036, y: 260.01187, z: -5147.811}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &464301286345916349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442687980753424198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 012dd9486b887e14dadbe9bc9e9c4245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyPosition1: {x: 50, y: -140, z: 0}
+  EnemyPosition2: {x: 150, y: -140, z: 0}
+  EnemyPosition3: {x: 250, y: -140, z: 0}
+  EnemyPosition4: {x: 350, y: -140, z: 0}
+  HeroPosition1: {x: -155, y: -140, z: 0}
+  HeroPosition2: {x: -330, y: -140, z: 0}
+  BossPosition: {x: 300, y: -140, z: 0}
+  waveIndex: 0
+  EnemiesAlive: 0
+  enemies:
+  - EnemyObject: {fileID: 9196232834713474243, guid: 949d48fb9f131f64d910d18d81710a94,
+      type: 3}
+    EnemyName: Bandit
+    MaxHealth: 100
+    AttackDamage: 10
+    Attack: {fileID: 8300000, guid: 502e913959660f545b2fedf9628f20cf, type: 3}
+    Death: {fileID: 8300000, guid: 5f21cefd8a0eea4429667866c2fed9cd, type: 3}
+  - EnemyObject: {fileID: 2657256689749842804, guid: c2df6871e15cfda4a8720fa140ab45e7,
+      type: 3}
+    EnemyName: Black clime
+    MaxHealth: 100
+    AttackDamage: 10
+    Attack: {fileID: 8300000, guid: b6774c7f985e6644fa45d2e7b6b3d3bc, type: 3}
+    Death: {fileID: 8300000, guid: 88596417f1983254682c20d40822ae47, type: 3}
+  - EnemyObject: {fileID: 2266645083484464226, guid: 1371c0ec11b2107459fd466b964ddb10,
+      type: 3}
+    EnemyName: burning-ghoul
+    MaxHealth: 100
+    AttackDamage: 15
+    Attack: {fileID: 8300000, guid: 34fac77e7e6f06741b6e8925a626c633, type: 3}
+    Death: {fileID: 8300000, guid: 92d3520e59e9cb142a21b01628f1ee19, type: 3}
+  - EnemyObject: {fileID: 6226849946352286925, guid: 45a5e61cc672123479ef9caefa74d362,
+      type: 3}
+    EnemyName: Cave monster
+    MaxHealth: 100
+    AttackDamage: 10
+    Attack: {fileID: 8300000, guid: 602a9e1b2f768f74abc3fe568cc3ad3d, type: 3}
+    Death: {fileID: 8300000, guid: 149c354c95e8deb4083440fafb62e585, type: 3}
+  - EnemyObject: {fileID: 2864191101156823346, guid: f38b1ca40f92d8844a4859ee25c890ff,
+      type: 3}
+    EnemyName: Crab
+    MaxHealth: 100
+    AttackDamage: 10
+    Attack: {fileID: 8300000, guid: 4d185305750bd9241b569817ec525263, type: 3}
+    Death: {fileID: 8300000, guid: 49546399410076f45a740efdb6a8e3d8, type: 3}
+  - EnemyObject: {fileID: 4318639180523963332, guid: bc81839bfa947ff4587eb0b690bbf0e7,
+      type: 3}
+    EnemyName: Evil Wizard
+    MaxHealth: 100
+    AttackDamage: 10
+    Attack: {fileID: 8300000, guid: 4e185b92cecc1ca48a756ca5f1f6d2ff, type: 3}
+    Death: {fileID: 8300000, guid: f9c34e59112739345aa4f0c7181ccab2, type: 3}
+  - EnemyObject: {fileID: 2423197114075985243, guid: 30b487d98057a174d9bb77cff8d9c41e,
+      type: 3}
+    EnemyName: Flying eye
+    MaxHealth: 100
+    AttackDamage: 10
+    Attack: {fileID: 8300000, guid: 841615eac75a58d48bcefebdb71cd919, type: 3}
+    Death: {fileID: 8300000, guid: d6ad54e65eb8adc468f78dba8fff8a5c, type: 3}
+  - EnemyObject: {fileID: 4798511893860951622, guid: 391af6af77848144e8d276fcef311e67,
+      type: 3}
+    EnemyName: Goblin
+    MaxHealth: 100
+    AttackDamage: 10
+    Attack: {fileID: 8300000, guid: 6f504438e46933e449ce89d7cc8a2cec, type: 3}
+    Death: {fileID: 8300000, guid: 249e03a59f4dc464a98644da3b47c30a, type: 3}
+  - EnemyObject: {fileID: 4510561477667024636, guid: 8f5bd7ed5780e9e4294bd9934ce5f4df,
+      type: 3}
+    EnemyName: hell-gato
+    MaxHealth: 100
+    AttackDamage: 10
+    Attack: {fileID: 8300000, guid: fac0693cf40b06344a034ce1785c1907, type: 3}
+    Death: {fileID: 8300000, guid: d3b772db9dd889f44b0167778e90a3e9, type: 3}
+  - EnemyObject: {fileID: 6298202166443123783, guid: a218306883b8c384eb27337bec86a3fe,
+      type: 3}
+    EnemyName: Mushroom
+    MaxHealth: 100
+    AttackDamage: 10
+    Attack: {fileID: 8300000, guid: 841615eac75a58d48bcefebdb71cd919, type: 3}
+    Death: {fileID: 8300000, guid: 35de34d0d4349d84eb14b4b71f8040dc, type: 3}
+  - EnemyObject: {fileID: 1546437751752358348, guid: af60e2bd3a6ae5a46a2a2b837154b502,
+      type: 3}
+    EnemyName: Muslim
+    MaxHealth: 100
+    AttackDamage: 10
+    Attack: {fileID: 8300000, guid: 00861ff00f62f3548b483db48b60c5fb, type: 3}
+    Death: {fileID: 8300000, guid: 0749156d07bbc5f4b9685066496d866a, type: 3}
+  - EnemyObject: {fileID: 6344214216210160991, guid: 0172c1ebb06ddc046907343d9f4d8e4e,
+      type: 3}
+    EnemyName: octopus
+    MaxHealth: 100
+    AttackDamage: 10
+    Attack: {fileID: 8300000, guid: 79d39f3eb3c3bef4dae3c1670454a514, type: 3}
+    Death: {fileID: 8300000, guid: 4a5a2596364143e41abf9a9f9616733c, type: 3}
+  - EnemyObject: {fileID: 5234165237246476856, guid: 43eee1e127f105240a3a9a9eb45e80ba,
+      type: 3}
+    EnemyName: skeleton 1
+    MaxHealth: 100
+    AttackDamage: 10
+    Attack: {fileID: 8300000, guid: 45194d3ada2579b47bd6914c50247bbb, type: 3}
+    Death: {fileID: 8300000, guid: 6f140afa557765347b9fae917a161cbe, type: 3}
+  - EnemyObject: {fileID: 6143187667349952278, guid: d612a3292b58b21488dd53123375f06b,
+      type: 3}
+    EnemyName: skeleton 2-clothed
+    MaxHealth: 100
+    AttackDamage: 10
+    Attack: {fileID: 8300000, guid: 45194d3ada2579b47bd6914c50247bbb, type: 3}
+    Death: {fileID: 8300000, guid: 6f140afa557765347b9fae917a161cbe, type: 3}
+  - EnemyObject: {fileID: 6206937524759054684, guid: 1cbdc2b5c243fdf42a5fb2911a9bb34b,
+      type: 3}
+    EnemyName: Skeleton shield 1
+    MaxHealth: 100
+    AttackDamage: 10
+    Attack: {fileID: 8300000, guid: 44382f47b14a19540835c89ef8911b78, type: 3}
+    Death: {fileID: 8300000, guid: 88dcc36212aa0f643a6856011368fae7, type: 3}
+  - EnemyObject: {fileID: 5663049995826928250, guid: 00ebbe469269be9469e5ea868f46937e,
+      type: 3}
+    EnemyName: Skeleton shield 2
+    MaxHealth: 100
+    AttackDamage: 10
+    Attack: {fileID: 8300000, guid: e1216903ac3e8a54a906d28856c5e761, type: 3}
+    Death: {fileID: 8300000, guid: 88dcc36212aa0f643a6856011368fae7, type: 3}
+  - EnemyObject: {fileID: 1197492408265921121, guid: ca2bb65092f50cf4d85089a7bf847420,
+      type: 3}
+    EnemyName: Skeleton spear
+    MaxHealth: 100
+    AttackDamage: 10
+    Attack: {fileID: 8300000, guid: ee744ab0948e30b46a6673b2a930dc3f, type: 3}
+    Death: {fileID: 8300000, guid: 88dcc36212aa0f643a6856011368fae7, type: 3}
+  - EnemyObject: {fileID: 1139793519818416030, guid: 9016076d632e1b54ebcc781dca730f76,
+      type: 3}
+    EnemyName: Skeleton twohanded
+    MaxHealth: 100
+    AttackDamage: 10
+    Attack: {fileID: 8300000, guid: 5c13f63348043fd44b2863fda659cc8d, type: 3}
+    Death: {fileID: 8300000, guid: 88dcc36212aa0f643a6856011368fae7, type: 3}
+  - EnemyObject: {fileID: 7412486073415291261, guid: 8b43b7c97d841984d8b0053c20c01a50,
+      type: 3}
+    EnemyName: Vampire
+    MaxHealth: 100
+    AttackDamage: 10
+    Attack: {fileID: 8300000, guid: 023202140a0bebc4f8574547ce1e4afe, type: 3}
+    Death: {fileID: 8300000, guid: 5b34551433aad164884d0f8eaae21841, type: 3}
+  - EnemyObject: {fileID: 8776561655351575541, guid: e41835cf1cec48441a54e97b09f23dd6,
+      type: 3}
+    EnemyName: Blacksmith Dark
+    MaxHealth: 100
+    AttackDamage: 20
+    Attack: {fileID: 8300000, guid: 6ac35dcff51d1e448869f8fb7b795dc7, type: 3}
+    Death: {fileID: 8300000, guid: 6ac35dcff51d1e448869f8fb7b795dc7, type: 3}
+  - EnemyObject: {fileID: 7535283850282367633, guid: 01c4215e4a14c5948b95e70d9242a8c3,
+      type: 3}
+    EnemyName: Brother Dark
+    MaxHealth: 100
+    AttackDamage: 20
+    Attack: {fileID: 8300000, guid: 6ac35dcff51d1e448869f8fb7b795dc7, type: 3}
+    Death: {fileID: 8300000, guid: 6ac35dcff51d1e448869f8fb7b795dc7, type: 3}
+  - EnemyObject: {fileID: 4296361006943601561, guid: d7b17114a3cb3364d8e13d5b1f8ec0c5,
+      type: 3}
+    EnemyName: Condotier Dark
+    MaxHealth: 100
+    AttackDamage: 20
+    Attack: {fileID: 8300000, guid: 6ac35dcff51d1e448869f8fb7b795dc7, type: 3}
+    Death: {fileID: 8300000, guid: 6ac35dcff51d1e448869f8fb7b795dc7, type: 3}
+  - EnemyObject: {fileID: 8355508651715472864, guid: c69cf63076ffd2240b37d835f3dc4751,
+      type: 3}
+    EnemyName: GirlKnight Dark
+    MaxHealth: 100
+    AttackDamage: 20
+    Attack: {fileID: 8300000, guid: 6ac35dcff51d1e448869f8fb7b795dc7, type: 3}
+    Death: {fileID: 8300000, guid: 6ac35dcff51d1e448869f8fb7b795dc7, type: 3}
+  - EnemyObject: {fileID: 7122412878878452651, guid: 210a780760d7dec4aa8690592f74dd4b,
+      type: 3}
+    EnemyName: Knight Dark
+    MaxHealth: 100
+    AttackDamage: 20
+    Attack: {fileID: 8300000, guid: 6ac35dcff51d1e448869f8fb7b795dc7, type: 3}
+    Death: {fileID: 8300000, guid: 6ac35dcff51d1e448869f8fb7b795dc7, type: 3}
+  - EnemyObject: {fileID: 8481325847892598963, guid: 2df4c0accf775d047963bed4f6d9d508,
+      type: 3}
+    EnemyName: King Dark
+    MaxHealth: 100
+    AttackDamage: 20
+    Attack: {fileID: 8300000, guid: 6ac35dcff51d1e448869f8fb7b795dc7, type: 3}
+    Death: {fileID: 8300000, guid: 6ac35dcff51d1e448869f8fb7b795dc7, type: 3}
+  - EnemyObject: {fileID: 7152154017721613807, guid: 0f4b27e90614eb84b855fae9cfabd0db,
+      type: 3}
+    EnemyName: Monk Dark
+    MaxHealth: 100
+    AttackDamage: 20
+    Attack: {fileID: 8300000, guid: 6ac35dcff51d1e448869f8fb7b795dc7, type: 3}
+    Death: {fileID: 8300000, guid: 6ac35dcff51d1e448869f8fb7b795dc7, type: 3}
+  - EnemyObject: {fileID: 1546437751752358348, guid: c41ec3d50303f3143a42854c7e073a05,
+      type: 3}
+    EnemyName: Muslim Dark
+    MaxHealth: 100
+    AttackDamage: 20
+    Attack: {fileID: 8300000, guid: 6ac35dcff51d1e448869f8fb7b795dc7, type: 3}
+    Death: {fileID: 8300000, guid: 6ac35dcff51d1e448869f8fb7b795dc7, type: 3}
+  - EnemyObject: {fileID: 7412486073415291261, guid: 5c324bc4f2bc66b4692818372a568090,
+      type: 3}
+    EnemyName: Vampire Dark
+    MaxHealth: 100
+    AttackDamage: 20
+    Attack: {fileID: 8300000, guid: 6ac35dcff51d1e448869f8fb7b795dc7, type: 3}
+    Death: {fileID: 8300000, guid: 6ac35dcff51d1e448869f8fb7b795dc7, type: 3}
+  Bosses:
+  - EnemyObject: {fileID: 2423197114075985243, guid: 8f3f4ae74ffcead429fe9cc0ac64b2c3,
+      type: 3}
+    EnemyName: Flying eyeBoss
+    MaxHealth: 100
+    AttackDamage: 25
+    Attack: {fileID: 8300000, guid: 841615eac75a58d48bcefebdb71cd919, type: 3}
+    Death: {fileID: 8300000, guid: d6ad54e65eb8adc468f78dba8fff8a5c, type: 3}
+  - EnemyObject: {fileID: 2864191101156823346, guid: 81ffec8273e27234ca271d8b9702c2a4,
+      type: 3}
+    EnemyName: CrabBoss
+    MaxHealth: 100
+    AttackDamage: 25
+    Attack: {fileID: 8300000, guid: 4d185305750bd9241b569817ec525263, type: 3}
+    Death: {fileID: 8300000, guid: 49546399410076f45a740efdb6a8e3d8, type: 3}
+  - EnemyObject: {fileID: 4510561477667024636, guid: 1aead379d555c8b4db0214a0aa98bae6,
+      type: 3}
+    EnemyName: hell-gatoBoss
+    MaxHealth: 100
+    AttackDamage: 25
+    Attack: {fileID: 8300000, guid: fac0693cf40b06344a034ce1785c1907, type: 3}
+    Death: {fileID: 8300000, guid: d3b772db9dd889f44b0167778e90a3e9, type: 3}
+  - EnemyObject: {fileID: 6344214216210160991, guid: 9442baad5124b6a4a90c3d8f19f9afd0,
+      type: 3}
+    EnemyName: octopusBoss
+    MaxHealth: 100
+    AttackDamage: 25
+    Attack: {fileID: 8300000, guid: 79d39f3eb3c3bef4dae3c1670454a514, type: 3}
+    Death: {fileID: 8300000, guid: 4a5a2596364143e41abf9a9f9616733c, type: 3}
+  - EnemyObject: {fileID: 6298202166443123783, guid: d619fa8e05e894044bba9066a0e91ec4,
+      type: 3}
+    EnemyName: MushroomBoss
+    MaxHealth: 100
+    AttackDamage: 25
+    Attack: {fileID: 8300000, guid: 841615eac75a58d48bcefebdb71cd919, type: 3}
+    Death: {fileID: 8300000, guid: 35de34d0d4349d84eb14b4b71f8040dc, type: 3}
+  - EnemyObject: {fileID: 1139793519818416030, guid: b0e0abb4f77be0c46a36a17113759605,
+      type: 3}
+    EnemyName: Skeleton twohandedBoss
+    MaxHealth: 100
+    AttackDamage: 25
+    Attack: {fileID: 8300000, guid: 5c13f63348043fd44b2863fda659cc8d, type: 3}
+    Death: {fileID: 8300000, guid: 88dcc36212aa0f643a6856011368fae7, type: 3}
+  heroes:
+  - HeroObject: {fileID: 8776561655351575541, guid: f8be9717f55290043876af31c52a1bbe,
+      type: 3}
+    HeroName: Vulko
+    HeroImage: {fileID: 21300000, guid: 14e20b82f5820864fbc4e9bce20480f2, type: 3}
+    Skill1Image: {fileID: 21300000, guid: 65d211f55b476254ea778e5c4d2e5735, type: 3}
+    Skill2Image: {fileID: 21300000, guid: 95820cd46a64ec340875178db11a4775, type: 3}
+    Skill3Image: {fileID: 21300000, guid: 76f741d85e32e8f48ac969cea5662544, type: 3}
+    Skill4Image: {fileID: 21300000, guid: 7434430da0d7e9b478d477f2d77f4f37, type: 3}
+    Skill1Name: 
+    Skill2Name: 
+    Skill3Name: 
+    Skill4Name: 
+    MaxHealth: 100
+    Skill1Damage: 10
+    Skill2Damage: 15
+    Skill3Damage: 20
+    Skill4Damage: 30
+    Attack1: {fileID: 8300000, guid: 269419a1b5d12cd4ca82a3db0b0f1211, type: 3}
+    Attack2: {fileID: 8300000, guid: 83f22fe65ae5de64ba58fcfd709d71fc, type: 3}
+    Attack3: {fileID: 8300000, guid: b44fa352367b36b4f802d499f8bcacb3, type: 3}
+    Attack4: {fileID: 8300000, guid: 7d0dfda11346eb64082cce000f16e4c9, type: 3}
+    Death: {fileID: 8300000, guid: 09d4a262ce8436641a755616651cf6eb, type: 3}
+  - HeroObject: {fileID: 7535283850282367633, guid: 6ad88ed3bb44a91498d78fc3be301a43,
+      type: 3}
+    HeroName: Zvenyr
+    HeroImage: {fileID: 21300000, guid: bd630f2ffe543aa46af42c00c6bbb054, type: 3}
+    Skill1Image: {fileID: 21300000, guid: 21118b555a61b4a409ec20ba884cbcda, type: 3}
+    Skill2Image: {fileID: 21300000, guid: f0ab63148a67c7746aa6bbe5ec8b43e0, type: 3}
+    Skill3Image: {fileID: 21300000, guid: eced15bb959edc54c8457ab75f9a45b5, type: 3}
+    Skill4Image: {fileID: 21300000, guid: 411f88b287eb8504aa08edb04c1443c6, type: 3}
+    Skill1Name: 
+    Skill2Name: 
+    Skill3Name: 
+    Skill4Name: 
+    MaxHealth: 100
+    Skill1Damage: 10
+    Skill2Damage: 15
+    Skill3Damage: 20
+    Skill4Damage: 30
+    Attack1: {fileID: 8300000, guid: a57e361f6a37f2a48b46aec7538fbc7b, type: 3}
+    Attack2: {fileID: 8300000, guid: 7451c20c76431764bae3f0eff57b1e29, type: 3}
+    Attack3: {fileID: 8300000, guid: 6e4324dd886cdac4d8c61d6d771f09b1, type: 3}
+    Attack4: {fileID: 8300000, guid: 89116c2b372b3c64bb29985489e7b76c, type: 3}
+    Death: {fileID: 8300000, guid: b8e037aebb69e5f418bc397c6f3fb6d3, type: 3}
+  - HeroObject: {fileID: 4296361006943601561, guid: 2dcc0b5ea10e48c488de0fd60f68fed2,
+      type: 3}
+    HeroName: John
+    HeroImage: {fileID: 21300000, guid: f41be60091a2e2042944c6a3591d142f, type: 3}
+    Skill1Image: {fileID: 21300000, guid: 7434430da0d7e9b478d477f2d77f4f37, type: 3}
+    Skill2Image: {fileID: 21300000, guid: e6aa180725acf9446a08de1a76ab3c31, type: 3}
+    Skill3Image: {fileID: 21300000, guid: 28a02df1369b7fd4eab040459b0cc450, type: 3}
+    Skill4Image: {fileID: 21300000, guid: 7b8e0222a006d824e930445c7d435ac3, type: 3}
+    Skill1Name: Hawkwood
+    Skill2Name: 
+    Skill3Name: 
+    Skill4Name: 
+    MaxHealth: 100
+    Skill1Damage: 10
+    Skill2Damage: 15
+    Skill3Damage: 20
+    Skill4Damage: 30
+    Attack1: {fileID: 8300000, guid: 760b9a163172aab45afa745d1b44f74a, type: 3}
+    Attack2: {fileID: 8300000, guid: 83d7407b3cb3f244b86cd5501b165961, type: 3}
+    Attack3: {fileID: 8300000, guid: 58654cc5f7958e242adf4986de684f4c, type: 3}
+    Attack4: {fileID: 8300000, guid: c1e25efad3c734947b40d134abcc163f, type: 3}
+    Death: {fileID: 8300000, guid: 65a5d5e2780cd984e804379f519470e5, type: 3}
+  - HeroObject: {fileID: 8355508651715472864, guid: ad52b6678d3874b43b46fa8acb286926,
+      type: 3}
+    HeroName: Valery
+    HeroImage: {fileID: 21300000, guid: 63b1d0eff85ff7c4299ab3220ac62006, type: 3}
+    Skill1Image: {fileID: 21300000, guid: ac6ad492dd4743a47ab4da7cf07f6a95, type: 3}
+    Skill2Image: {fileID: 21300000, guid: 0d1dc8ade7e63d14da6ea8a209621906, type: 3}
+    Skill3Image: {fileID: 21300000, guid: 42f6c722ead369b4b934a116b4324a4d, type: 3}
+    Skill4Image: {fileID: 21300000, guid: 4f9df37e2a573a64cbc944fe068893cb, type: 3}
+    Skill1Name: 
+    Skill2Name: 
+    Skill3Name: 
+    Skill4Name: 
+    MaxHealth: 100
+    Skill1Damage: 10
+    Skill2Damage: 15
+    Skill3Damage: 20
+    Skill4Damage: 30
+    Attack1: {fileID: 8300000, guid: e92d8b52d99588f47b1905221a2f4f1b, type: 3}
+    Attack2: {fileID: 8300000, guid: d1d1501b5032b8448af245201542d486, type: 3}
+    Attack3: {fileID: 8300000, guid: 29852e152f5694a4686603648af37fd0, type: 3}
+    Attack4: {fileID: 8300000, guid: 59601a84f0f97e044b9036c5356b418f, type: 3}
+    Death: {fileID: 8300000, guid: aa240ff0a2397134798dd7be6c7fd913, type: 3}
+  - HeroObject: {fileID: 8481325847892598963, guid: 5d1f0695da9820e4cbdb1f5b2f342e7e,
+      type: 3}
+    HeroName: Karl
+    HeroImage: {fileID: 21300000, guid: 38def6b68e702304980960741a38ac5c, type: 3}
+    Skill1Image: {fileID: 21300000, guid: 1c59dbf7721d29f49896b04e5826acec, type: 3}
+    Skill2Image: {fileID: 21300000, guid: 5dc5f26eb2281954ea9f360eca7dc1a9, type: 3}
+    Skill3Image: {fileID: 21300000, guid: 65d211f55b476254ea778e5c4d2e5735, type: 3}
+    Skill4Image: {fileID: 21300000, guid: eced15bb959edc54c8457ab75f9a45b5, type: 3}
+    Skill1Name: 
+    Skill2Name: 
+    Skill3Name: 
+    Skill4Name: 
+    MaxHealth: 100
+    Skill1Damage: 10
+    Skill2Damage: 15
+    Skill3Damage: 20
+    Skill4Damage: 30
+    Attack1: {fileID: 8300000, guid: 52c35a0e5f031b443ba4097725222eb5, type: 3}
+    Attack2: {fileID: 8300000, guid: 6bb08e837f0923f47bdae8cec29ad1c4, type: 3}
+    Attack3: {fileID: 8300000, guid: b8fa2c8d4779cd842ad652fa187f8942, type: 3}
+    Attack4: {fileID: 8300000, guid: 1504a5d3fd217854ebece758715b79ab, type: 3}
+    Death: {fileID: 8300000, guid: ed179a492b751214688d2571f41547fe, type: 3}
+  - HeroObject: {fileID: 7122412878878452651, guid: 47255da24e5ad8f4084fa47c5c63b993,
+      type: 3}
+    HeroName: Richard
+    HeroImage: {fileID: 21300000, guid: 9ffde1592863e5e43b82ce85dd96165a, type: 3}
+    Skill1Image: {fileID: 21300000, guid: cc2b5254bc6d899428cdf9c883c79d6d, type: 3}
+    Skill2Image: {fileID: 21300000, guid: a5d9d7fef5fd2194ea14ff1561195c64, type: 3}
+    Skill3Image: {fileID: 21300000, guid: 2d089513ae4adfc48a683c362ad9992c, type: 3}
+    Skill4Image: {fileID: 21300000, guid: fb1ae10a47c45d04c807f8e2b317257b, type: 3}
+    Skill1Name: 
+    Skill2Name: 
+    Skill3Name: 
+    Skill4Name: 
+    MaxHealth: 100
+    Skill1Damage: 10
+    Skill2Damage: 15
+    Skill3Damage: 20
+    Skill4Damage: 30
+    Attack1: {fileID: 8300000, guid: 7d495cc24c7eb3e449b37bc6d4a0962f, type: 3}
+    Attack2: {fileID: 8300000, guid: 0bdb26fb6049be6498806e95e432c34c, type: 3}
+    Attack3: {fileID: 8300000, guid: c13d6ed96074d7b46a0d045875eb5478, type: 3}
+    Attack4: {fileID: 8300000, guid: 728a176cf829e4d4cbf4631c4f6ea44a, type: 3}
+    Death: {fileID: 8300000, guid: e7cb8861a25a3934996ebce08a57d3f6, type: 3}
+  - HeroObject: {fileID: 7152154017721613807, guid: 22255a5446ced584ca21eaf966f517af,
+      type: 3}
+    HeroName: HiQuan
+    HeroImage: {fileID: 21300000, guid: 3dadccf12d651d841966479acdd9d7cd, type: 3}
+    Skill1Image: {fileID: 21300000, guid: 6341005da49c17b4ebc0bd19107f0945, type: 3}
+    Skill2Image: {fileID: 21300000, guid: dbc021c87f35c8d45bf98ac669d91952, type: 3}
+    Skill3Image: {fileID: 21300000, guid: b692cd971b3d12e4a849330a7913aca4, type: 3}
+    Skill4Image: {fileID: 21300000, guid: 7f063e204fa5d9749abc2f89430fa955, type: 3}
+    Skill1Name: 
+    Skill2Name: 
+    Skill3Name: 
+    Skill4Name: 
+    MaxHealth: 100
+    Skill1Damage: 10
+    Skill2Damage: 15
+    Skill3Damage: 20
+    Skill4Damage: 30
+    Attack1: {fileID: 8300000, guid: c333aae5f02a5524f838ef3144ff4c43, type: 3}
+    Attack2: {fileID: 8300000, guid: 769378d70923f1e4d8fa76f414083a1d, type: 3}
+    Attack3: {fileID: 8300000, guid: 65ada582562ffb34eb160ad54f286700, type: 3}
+    Attack4: {fileID: 8300000, guid: 4cd821a2583fcba47bacdcdc0f8eeefb, type: 3}
+    Death: {fileID: 8300000, guid: 6409a6538709fa344bca87f29fb79250, type: 3}
+  - HeroObject: {fileID: 3221440567231578696, guid: c9817532254cca0498a0ffc232f871c8,
+      type: 3}
+    HeroName: Sadras
+    HeroImage: {fileID: 21300000, guid: a67c7d002152b0847873e741a42ae3f0, type: 3}
+    Skill1Image: {fileID: 21300000, guid: 92b315788e6ebb34f90dddacbca17e68, type: 3}
+    Skill2Image: {fileID: 21300000, guid: 2d0997ac1b1fd664e98202450e7ea2d7, type: 3}
+    Skill3Image: {fileID: 21300000, guid: 6e7451a3e6c5edb4aa5ce0fa9c5ac259, type: 3}
+    Skill4Image: {fileID: 21300000, guid: 8a5f9829a049c704fa992203bfc451f2, type: 3}
+    Skill1Name: 
+    Skill2Name: 
+    Skill3Name: 
+    Skill4Name: 
+    MaxHealth: 100
+    Skill1Damage: 20
+    Skill2Damage: 15
+    Skill3Damage: 20
+    Skill4Damage: 15
+    Attack1: {fileID: 8300000, guid: 475fba949b2e18f47a5a260502271983, type: 3}
+    Attack2: {fileID: 8300000, guid: 892ce18dddc26884994cf021a4e94654, type: 3}
+    Attack3: {fileID: 8300000, guid: af0959f0408454b41b5a44eb35cdcfaf, type: 3}
+    Attack4: {fileID: 8300000, guid: d77c5e3ca97b63d49b00b0b572f64da4, type: 3}
+    Death: {fileID: 8300000, guid: 6c6b6dd521cea7a4699a456c769fcf84, type: 3}
+  hero1:
+    HeroObject: {fileID: 0}
+    HeroName: 
+    HeroImage: {fileID: 0}
+    Skill1Image: {fileID: 0}
+    Skill2Image: {fileID: 0}
+    Skill3Image: {fileID: 0}
+    Skill4Image: {fileID: 0}
+    Skill1Name: 
+    Skill2Name: 
+    Skill3Name: 
+    Skill4Name: 
+    MaxHealth: 100
+    Skill1Damage: 10
+    Skill2Damage: 15
+    Skill3Damage: 20
+    Skill4Damage: 30
+    Attack1: {fileID: 0}
+    Attack2: {fileID: 0}
+    Attack3: {fileID: 0}
+    Attack4: {fileID: 0}
+    Death: {fileID: 0}
+  hero2:
+    HeroObject: {fileID: 0}
+    HeroName: 
+    HeroImage: {fileID: 0}
+    Skill1Image: {fileID: 0}
+    Skill2Image: {fileID: 0}
+    Skill3Image: {fileID: 0}
+    Skill4Image: {fileID: 0}
+    Skill1Name: 
+    Skill2Name: 
+    Skill3Name: 
+    Skill4Name: 
+    MaxHealth: 100
+    Skill1Damage: 10
+    Skill2Damage: 15
+    Skill3Damage: 20
+    Skill4Damage: 30
+    Attack1: {fileID: 0}
+    Attack2: {fileID: 0}
+    Attack3: {fileID: 0}
+    Attack4: {fileID: 0}
+    Death: {fileID: 0}
+  enemy1:
+    EnemyObject: {fileID: 0}
+    EnemyName: 
+    MaxHealth: 100
+    AttackDamage: 10
+    Attack: {fileID: 0}
+    Death: {fileID: 0}
+  enemy2:
+    EnemyObject: {fileID: 0}
+    EnemyName: 
+    MaxHealth: 100
+    AttackDamage: 10
+    Attack: {fileID: 0}
+    Death: {fileID: 0}
+  enemy3:
+    EnemyObject: {fileID: 0}
+    EnemyName: 
+    MaxHealth: 100
+    AttackDamage: 10
+    Attack: {fileID: 0}
+    Death: {fileID: 0}
+  enemy4:
+    EnemyObject: {fileID: 0}
+    EnemyName: 
+    MaxHealth: 100
+    AttackDamage: 10
+    Attack: {fileID: 0}
+    Death: {fileID: 0}
+  IsBoss: 0
